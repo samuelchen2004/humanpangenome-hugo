@@ -13,6 +13,8 @@ tags = [
 
 *Overview:* Researchers from the [Human Pangenome Reference Consortium](https://humanpangenome.org/) announce the open access publication of [Year 1 Sequencing data](https://github.com/human-pangenomics/HPP_Year1_Data_Freeze_v1.0) from 30 samples, representing the first major data release from this project. In addition to data produced as part of the HPRC, the release includes data from over 15 additional samples produced outside of the HPRC.
 
+{{< youtube eB-KSz5EdY8 >}}
+
 ### Sequencing Data Production Centers and Industry partners included the following:
 
 * PacBio Hifi Data Produced By [UW](https://eichlerlab.gs.washington.edu/) and [WashU](https://www.genome.wustl.edu/) with support from [PacBio](https://www.pacb.com/)
@@ -25,6 +27,8 @@ tags = [
 HPRC members selected samples for this study based on adding diversity to the current human reference. Samples were selected from the [1,000 Genome Collection at Coriell](https://www.coriell.org/1/NHGRI/Collections/1000-Genomes-Collections/1000-Genomes-Project) and are broadly consented to, allowing for maximum data sharing enabling scientists to work together.
 
 Production teams generated the data as part of NHGRI’s [Human Genome Reference Program](https://www.genome.gov/Funded-Programs-Projects/Human-Genome-Reference-Program), a multi-faceted program to create a complete representation of haplotype variation and an ecosystem of tools. HPRC seeks to work with other international teams focused on building the human pangenome reference. In keeping with the spirit of the HPRC, data is being made available through three primary data repositories – [NCBI](https://www.ncbi.nlm.nih.gov/search/all/?term=PRJNA701308), [EMBL-EBI](https://www.ebi.ac.uk/ena/browser/view/PRJNA701308), and [DDBJ](https://www.ddbj.nig.ac.jp/index-e.html).
+
+![Error](https://cdn.the-scientist.com/assets/articleNo/68308/hImg/40800/consensus-banner-m.webp)
 
 This data release represents the consortium’s commitment to its mission under some of the most challenging research conditions due to the COVID pandemic. All work was completed within the safety guidelines and mandates of each entity involved in the project.
 
