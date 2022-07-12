@@ -1,5 +1,5 @@
 baseURL = "https://example.com"
-title = "Tella"
+title = "Human Pangenome"
 author = "username"
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -21,7 +21,7 @@ enableRobotsTXT = true
   mainSections = ['blog']
 
   [params.logo]
-    main = "img/logo/logo.svg"
+    main = "img/slide/Logo-3.3.png"
     alt = "Tella Logo"
 
     # The size parameter is the class name of tailwindcss
@@ -49,8 +49,8 @@ enableRobotsTXT = true
 [menu]
 
   [[menu.main]]
-    identifier = "products"
-    name = "Publications"
+    identifier = "about"
+    name = "About"
     url = "/products/"
     weight = 1
 
@@ -59,12 +59,6 @@ enableRobotsTXT = true
     name = "Data and Resources"
     url = "/blog/"
     weight = 2
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 4
 
   [[menu.main]]
     identifier = "contact"
@@ -76,7 +70,7 @@ enableRobotsTXT = true
     identifier = "publications"
     name = "Publications"
     url = "/publications/"
-    weight = 6
+    weight = 4
 
   # Footer Menu
   [[menu.footer]]
@@ -95,3 +89,8 @@ enableRobotsTXT = true
     url = "https://twitter.com/HumanPangenome"
     pre = "<i class='icon-twitter text-2xl'></i>"
       weight = 2
+
+  [[menu.footer]]
+    name = "Wiki Login"
+    url = "https://wiki.humanpangenome.org/"
+      weight = 4

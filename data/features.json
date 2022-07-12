@@ -1,22 +1,21 @@
 [
   {
-    "title": "Simple",
-    "description": "All the bare necessities are there.",
-    "icon": "icon-desktop_windows"
+    "title": "Scientists Sequence the Complete Human Genome for the First Time",
+    "description": "NHGRI News Story",
+    "icon": "icon-lightbulb_outline",
+    "link": "https://www.genome.gov/news/news-release/researchers-generate-the-first-complete-gapless-sequence-of-a-human-genome"
   },
   {
-    "title": "Fast",
-    "description": "Light weight and fast loading speed.",
-    "icon": "icon-lightbulb_outline"
+    "title": "Year 1 Sequencing Data",
+    "description": "Global Release",
+    "icon": "icon-desktop_windows",
+    "link": "blog/year-1-sequencing-data-release/"
   },
   {
-    "title": "Github",
-    "description": "Please fork the Github repository and contribute to this theme!",
-    "icon": "icon-github",
-    "link": "https://github.com/opera7133/tella"
-  },
-  {
-    "title": "Twitter",
-    "icon": "icon-twitter"
+    "title": "Human Pangenome Project: Educational Video",
+    "description": "Released by National Human Genome Research Institute (NHGRI)",
+    "icon": "icon-youtube",
+    "link": "https://vimeo.com/473532397?embedded=true&source=video_title&owner=63293532",
+    "image": "img/slide/gif6.gif"
   }
 ]
