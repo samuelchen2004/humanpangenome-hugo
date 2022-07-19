@@ -1,7 +1,3 @@
-[submodule "host"]
-	path = host
-	url = https://github.com/samuelchen2004/humanpangenome.github.io.git
-	branch = main
 [submodule "public"]
 	path = public
 	url = https://github.com/samuelchen2004/humanpangenome.github.io.git

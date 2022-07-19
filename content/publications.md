@@ -9,9 +9,24 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accu
 
 #### There are several HPRC publications in development at this time. Please check back for updates and follow us on Twitter @[HumanPangenome](https://twitter.com/humanpangenome?lang=en).  Below is a selection of publications from the HPRC membership.  
 
+| | |
+| -- | -- |
+|[The Human Pangenome Project: a global resource to map genomic diversity.](https://www.nature.com/articles/s41586-022-04601-8)  
+*Wang T., Antonacci-Fulton L., Howe K., et al., 2022-04-20* | ![Error](/img/slide/badge1.png)|
 
-[The Human Pangenome Project: a global resource to map genomic diversity.](https://www.nature.com/articles/s41586-022-04601-8)  
-*Wang T., Antonacci-Fulton L., Howe K., et al., 2022-04-20*
+![Error](/img/slide/badge2.html)
+
+```<div data-badge-popover="right" data-badge-type="medium-donut" data-doi="10.1038/nature.2014.14583" data-hide-no-mentions="true" class="altmetric-embed"></div>```
+
+<div class="col-md-offset-1">
+	<div class="note note-info">
+		<b>
+			Hello this is a test *italics* regular text
+		</b>
+	</div>
+</div>
+
+<p>Hello World!</p>
 
 [Pangenome-based genome inference allows efficient and accurate genotyping across a wide spectrum of variant classes.](https://www.nature.com/articles/s41588-022-01043-w)  
 *Ebler J, Ebert P, Clarke WE, Rausch T, Audano PA, Houwaart T, Mao Y, Korbel JO, Eichler EE, Zody MC, Dilthey AT, Marschall T., 2022-04-11*

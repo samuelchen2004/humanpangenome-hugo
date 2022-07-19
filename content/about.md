@@ -9,7 +9,6 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accu
 
 #### There are several HPRC publications in development at this time. Please check back for updates and follow us on Twitter @[HumanPangenome](https://twitter.com/humanpangenome?lang=en).  Below is a selection of publications from the HPRC membership.  
 
-
 [The Human Pangenome Project: a global resource to map genomic diversity.](https://www.nature.com/articles/s41586-022-04601-8)  
 *Wang T., Antonacci-Fulton L., Howe K., et al., 2022-04-20*
 

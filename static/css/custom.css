@@ -3,3 +3,28 @@
  You can change the article headings, fonts, colors, etc.
 */
 
+.mopen {
+  float: left;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  position: relative;
+  z-index: 1000;
+}
+.twitter {
+  background-color: #ffffff;
+}
+.line {
+  background-color: #ffffff;
+}
+.facebook {
+  background-color: #ffffff;
+}
+.pocket {
+  background-color: #ffffff;
+}
+.hatena {
+  background-color: #ffffff;
+}
+.url {
+  background-color: #ffffff;
+}

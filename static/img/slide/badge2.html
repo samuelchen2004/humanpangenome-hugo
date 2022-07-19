@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9bbe7802f4","applicationID":"11910568","transactionName":"ewsKR0EKDV1TShcCUkwFDV8cFgleQQ==","queueTime":0,"applicationTime":458,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"9bbe7802f4",applicationID:"11910568"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta content='unsafe-url' name='referrer'>
+<title>Altmetric – Stephen Hawking: &#39;There are no black holes&#39;</title>
+<script>
+  document.domain = 'altmetric.com'
+</script>
+<!--[if IE 8]>
+<script src="/details/assets/html5shiv.min-30e75d2b4696b7a96395a040950be89212b83f05fe70d6a007f4dffeee9c91b7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
+<![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.3/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0-rc.1.0/leaflet.markercluster.js"></script>
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.3/leaflet.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0-rc.1.0/MarkerCluster.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0-rc.1.0/MarkerCluster.Default.css" />
+<script src="/details/assets/application-94387cb2f7c8fbc96e8731abb639b57b5224e9467298e669c5078d3fde5ba387.js"></script>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" media="all" href="/details/assets/application-0f16ee1c7c1145c961b549b949ef2b8db89c7921e88696853b75313216806d9c.css" />
+<link rel="stylesheet" media="print" href="/details/assets/print-586650102937ceffa4705d58a96ab8f40a9982900a0549d3ae6582d390e2cfc1.css" />
+<link rel="icon" href="/details/favicon-16.png" sizes="16x16"><link rel="icon" href="/details/favicon-32.png" sizes="32x32"><link rel="icon" href="/details/favicon-48.png" sizes="48x48"><link rel="icon" href="/details/favicon-64.png" sizes="64x64"><link rel="icon" href="/details/favicon-128.png" sizes="128x128"><link rel="icon" href="/details/touch-icon-192x192.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-180x180-precomposed.png" sizes="180x180"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-152x152-precomposed.png" sizes="152x152"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-144x144-precomposed.png" sizes="144x144"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-120x120-precomposed.png" sizes="120x120"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-114x114-precomposed.png" sizes="114x114"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-76x76-precomposed.png" sizes="76x76"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-72x72-precomposed.png" sizes="72x72"><link rel="apple-touch-icon-precomposed" href="/details/apple-touch-icon-precomposed.png">
+<link rel="canonical" href="https://www.altmetric.com/details/2068207">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54928-18', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta content='summary' name='twitter:card'>
+<meta content='@altmetric' name='twitter:site'>
+<meta content='@altmetric' name='twitter:creator'>
+<meta content='www.altmetric.com' name='twitter:domain'>
+<meta content='Report for: Stephen Hawking: &#39;There are no black holes&#39;' name='twitter:title'>
+<meta content='In the top 5% of all research outputs scored by Altmetric' name='twitter:description'>
+<meta content='https://badges.altmetric.com/?style=donut&amp;score=3737&amp;types=mbvrtwfg&amp;size=120' name='twitter:image'>
+
+<link rel="prefetch" href="https://www.altmetric.com/details/2068207/news?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/blogs?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/twitter?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/facebook?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/wikipedia?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/google?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/reddit?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/qa?_pjax=.content-panel"><link rel="prefetch" href="https://www.altmetric.com/details/2068207/video?_pjax=.content-panel">
+<meta content='width=device-width, initial-scale=0.8' name='viewport'>
+</head>
+<body class='template-www'>
+<!--[if lte IE 8]>
+<div class='obsolete-browser-warning'>
+Your browser is out of date. It has known security flaws and may not display all features of this and other websites. <a href='https://browser-update.org/update.html' target='_blank'>Click here to learn how to update your browser</a>
+</div>
+<![endif]-->
+
+<a href='#main-content' id='skip-to-content-link'>↓ Skip to main content</a>
+<div class='branding-header'>
+<a class='logo' href='https://www.altmetric.com' target='_blank'>Altmetric</a>
+<div class='blurb'>
+<div class='button-wrapper'>
+<div class='share-button' data-share-address='https://www.altmetric.com/details/2068207'></div>
+
+<a class='embed-link header-link' href='/details/embed?id=2068207' target='_blank'>
+<i class="fa fa-thumb-tack"></i>
+<span class='text'>Embed badge</span>
+</a>
+
+<a class='about-link header-link' href='/details/about' target='_blank'>
+<i class="fa fa-question"></i>
+<span class='text'>What is this page?</span>
+</a>
+
+
+</div>
+</div>
+</div>
+
+<div class='document-header'>
+<h1><a target="_blank" href="https://doi.org/10.1038/nature.2014.14583">Stephen Hawking: &#39;There are no black holes&#39;</a></h1>
+<div class='tagline'>Overview of attention for news story in Nature</div>
+</div>
+
+<div class='content-wrapper'>
+<div class='score-panel'>
+<div class='altmetric-badge-wrapper'>
+<div style="background-image: url(https://badges.altmetric.com/?style=donut&amp;score=3737&amp;types=mbvrtwfg&amp;size=242); background-image: linear-gradient(transparent, transparent), url(https://badges.altmetric.com/?style=donut&amp;score=3737&amp;types=mbvrtwfg&amp;size=242&amp;svg);" class="altmetric-badge">Altmetric Badge</div>
+</div>
+
+<div class='score-context-wrapper' data-hide='Less…' data-show='More…'>
+<h2>
+<a class="contextual-help-link" data-type="score" title="About this data" data-content="&lt;h3&gt;What is the Altmetric Attention Score?&lt;/h3&gt;
+&lt;p&gt;The Altmetric Attention Score for a research output provides an indicator of the amount of attention that it has received. The score is derived from an automated algorithm, and represents a weighted count of the amount of attention we&#39;ve picked up for a research output.&lt;/p&gt;
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://help.altmetric.com/support/solutions/articles/6000233311-how-is-the-altmetric-attention-score-calculated-&quot;&gt;Click here to learn more about how Altmetric Attention Scores are calculated.&lt;/a&gt;&lt;/p&gt;
+" href="#"><i class="fa fa-question-circle"></i></a>
+About this Attention Score
+</h2>
+<ul>
+<li>
+<div class='summary'>In the top 5% of all research outputs scored by Altmetric</div>
+</li>
+<li>
+<div class='summary'>High Attention Score compared to outputs of the same age (99th percentile)</div>
+</li>
+<li>
+<div class='summary'>High Attention Score compared to outputs of the same age and source (99th percentile)</div>
+</li>
+</ul>
+</div>
+
+<div class='mention-counts-wrapper'>
+<h2>Mentioned by</h2>
+<dl class='mention-counts'>
+<dt style="background-color: #B60000">news</dt><dd><a href="/details/2068207/news"><strong>39</strong> news outlets</a></dd>
+<dt style="background-color: #e89500">blogs</dt><dd><a href="/details/2068207/blogs"><strong>30</strong> blogs</a></dd>
+<dt style="background-color: #2F90B9">twitter</dt><dd><a href="/details/2068207/twitter"><strong>3383</strong> tweeters</a></dd>
+<dt style="background-color: #0b2ca4">facebook</dt><dd><a href="/details/2068207/facebook"><strong>1056</strong> Facebook pages</a></dd>
+<dt style="background-color: #3b2a3d">wikipedia</dt><dd><a href="/details/2068207/wikipedia"><strong>4</strong> Wikipedia pages</a></dd>
+</dl>
+<dl class='mention-counts'>
+<dt style="background-color: #912470">googleplus</dt><dd><a href="/details/2068207/google"><strong>120</strong> Google+ users</a></dd>
+<dt style="background-color: #B9DDEB">reddit</dt><dd><a href="/details/2068207/reddit"><strong>16</strong> Redditors</a></dd>
+<dt style="background-color: #EFEFEF">q&amp;a</dt><dd><a href="/details/2068207/qa"><strong>2</strong> Q&A threads</a></dd>
+<dt style="background-color: #98C973">video</dt><dd><a href="/details/2068207/video"><strong>4</strong> video uploaders</a></dd>
+</dl>
+</div>
+
+<div class='scholarly-citation-counts-wrapper'>
+<h2>Citations</h2>
+<dl class='scholarly-citation-counts'>
+<dt style="background-color: #0d4667">dimensions_citation</dt><dd><a href="/details/2068207/citations"><strong>2</strong> Dimensions</a></dd>
+</dl>
+</div>
+
+<div class='reader-counts-wrapper'>
+<h2>Readers on</h2>
+<dl class='reader-counts'>
+<dt style="background-color: #A60000">mendeley</dt><dd><a href="/details/2068207#mendeley-demographics"><strong>75</strong> Mendeley</a></dd>
+<dt style="background-color: #BCD2EF">citeulike</dt><dd><strong>1</strong> CiteULike</dd>
+</dl>
+</div>
+
+<p class='footer'>
+<a class='about-link' href='/details/about' target='_blank'>
+What is this page?
+</a>
+</p>
+
+
+</div>
+<div class='content-panel'><div class='tab-panel-wrapper'>
+<div class='tab-panel'>
+<a class="summary_tab active" href="/details/2068207">Summary</a>
+<a href="/details/2068207/news">News</a>
+<a href="/details/2068207/blogs">Blogs</a>
+<a href="/details/2068207/twitter">Twitter</a>
+<a href="/details/2068207/facebook">Facebook</a>
+<a href="/details/2068207/wikipedia">Wikipedia</a>
+<a href="/details/2068207/google">Google+</a>
+<a href="/details/2068207/reddit">Reddit</a>
+<a href="/details/2068207/qa">Q&amp;A</a>
+<a href="/details/2068207/video">Video</a>
+<a class="citation_tab " href="/details/2068207/citations">Dimensions citations</a>
+</div>
+</div>
+<div class='content-panel-inner' id='main-content'>
+<div class='tabbed-panel'>
+<div class='summary-panel'>
+<a class='limited-access-warning' href='https://www.altmetric.com/details-page-access/' target='_blank'>
+You are seeing a free-to-access but limited selection of the activity Altmetric has collected about this research output.
+<strong>Click here to find out more</strong>.
+</a>
+
+<div class='summary-document-wrapper'>
+<div class='summary-document-details'>
+<div class='document-details-table'>
+<table>
+<tr>
+<th>Title</th>
+<td>
+<div class='content-wrapper'>
+Stephen Hawking: &#39;There are no black holes&#39;
+</div>
+</td>
+</tr>
+<tr>
+<th>Published by</th>
+<td>
+<div class='content-wrapper'>
+Nature, January 2014
+</div>
+</td>
+</tr>
+<tr>
+<th>DOI</th>
+<td><a target="_blank" href="https://doi.org/10.1038/nature.2014.14583">10.1038/nature.2014.14583</a></td>
+</tr>
+<tr>
+<th>Authors</th>
+<td>
+<div class='content-wrapper'>
+<p class='truncated' data-truncate-collapse='[hide]' data-truncate-expand='[show]' data-truncate-to='100'>
+Zeeya Merali
+</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class='summary-document-actions'>
+<a target="_blank" class="publisher button" href="https://doi.org/10.1038/nature.2014.14583">View on publisher site</a>
+<a class="email email-update-link button" href="/details/email_updates?id=2068207">Alert me about new mentions</a>
+</div>
+
+</div>
+<div class='tabbable-panel' data-type='twitter-demographics'>
+<h2>Twitter Demographics</h2>
+<div class='section-summary'>
+<div class='text'>The data shown below were collected from the profiles of <strong>3,383</strong> tweeters who shared this research output. <a href='https://help.altmetric.com/support/solutions/articles/6000235926-twitter' target='_blank'>Click here to find out more about how the information was compiled.</a></div>
+</div>
+<div class='demographics-panel'>
+<div class='demographics-group twitter'>
+<div class="geo_chart_wrapper chart_wrapper"><div class="geo_chart" data-countries="[[{&quot;v&quot;:&quot;US&quot;,&quot;f&quot;:&quot;United States&quot;},733],[{&quot;v&quot;:&quot;GB&quot;,&quot;f&quot;:&quot;United Kingdom&quot;},206],[{&quot;v&quot;:&quot;CA&quot;,&quot;f&quot;:&quot;Canada&quot;},120],[{&quot;v&quot;:&quot;IN&quot;,&quot;f&quot;:&quot;India&quot;},80],[{&quot;v&quot;:&quot;ES&quot;,&quot;f&quot;:&quot;Spain&quot;},78],[{&quot;v&quot;:&quot;DE&quot;,&quot;f&quot;:&quot;Germany&quot;},74],[{&quot;v&quot;:&quot;MX&quot;,&quot;f&quot;:&quot;Mexico&quot;},54],[{&quot;v&quot;:&quot;FR&quot;,&quot;f&quot;:&quot;France&quot;},53],[{&quot;v&quot;:&quot;AU&quot;,&quot;f&quot;:&quot;Australia&quot;},45],[{&quot;v&quot;:&quot;IT&quot;,&quot;f&quot;:&quot;Italy&quot;},42],[{&quot;v&quot;:&quot;NL&quot;,&quot;f&quot;:&quot;Netherlands&quot;},41],[{&quot;v&quot;:&quot;BR&quot;,&quot;f&quot;:&quot;Brazil&quot;},40],[{&quot;v&quot;:&quot;JP&quot;,&quot;f&quot;:&quot;Japan&quot;},30],[{&quot;v&quot;:&quot;TR&quot;,&quot;f&quot;:&quot;Turkey&quot;},27],[{&quot;v&quot;:&quot;SE&quot;,&quot;f&quot;:&quot;Sweden&quot;},19],[{&quot;v&quot;:&quot;FI&quot;,&quot;f&quot;:&quot;Finland&quot;},16],[{&quot;v&quot;:&quot;VE&quot;,&quot;f&quot;:&quot;Venezuela, Bolivarian Republic of&quot;},15],[{&quot;v&quot;:&quot;BE&quot;,&quot;f&quot;:&quot;Belgium&quot;},13],[{&quot;v&quot;:&quot;NZ&quot;,&quot;f&quot;:&quot;New Zealand&quot;},13],[{&quot;v&quot;:&quot;GR&quot;,&quot;f&quot;:&quot;Greece&quot;},12],[{&quot;v&quot;:&quot;CL&quot;,&quot;f&quot;:&quot;Chile&quot;},11],[{&quot;v&quot;:&quot;EC&quot;,&quot;f&quot;:&quot;Ecuador&quot;},11],[{&quot;v&quot;:&quot;CH&quot;,&quot;f&quot;:&quot;Switzerland&quot;},11],[{&quot;v&quot;:&quot;AT&quot;,&quot;f&quot;:&quot;Austria&quot;},10],[{&quot;v&quot;:&quot;AR&quot;,&quot;f&quot;:&quot;Argentina&quot;},9],[{&quot;v&quot;:&quot;PK&quot;,&quot;f&quot;:&quot;Pakistan&quot;},9],[{&quot;v&quot;:&quot;KM&quot;,&quot;f&quot;:&quot;Comoros&quot;},9],[{&quot;v&quot;:&quot;SG&quot;,&quot;f&quot;:&quot;Singapore&quot;},8],[{&quot;v&quot;:&quot;CO&quot;,&quot;f&quot;:&quot;Colombia&quot;},8],[{&quot;v&quot;:&quot;HU&quot;,&quot;f&quot;:&quot;Hungary&quot;},8],[{&quot;v&quot;:&quot;PL&quot;,&quot;f&quot;:&quot;Poland&quot;},8],[{&quot;v&quot;:&quot;MY&quot;,&quot;f&quot;:&quot;Malaysia&quot;},7],[{&quot;v&quot;:&quot;IE&quot;,&quot;f&quot;:&quot;Ireland&quot;},7],[{&quot;v&quot;:&quot;RU&quot;,&quot;f&quot;:&quot;Russia&quot;},7],[{&quot;v&quot;:&quot;ZA&quot;,&quot;f&quot;:&quot;South Africa&quot;},7],[{&quot;v&quot;:&quot;KW&quot;,&quot;f&quot;:&quot;Kuwait&quot;},7],[{&quot;v&quot;:&quot;TH&quot;,&quot;f&quot;:&quot;Thailand&quot;},6],[{&quot;v&quot;:&quot;RO&quot;,&quot;f&quot;:&quot;Romania&quot;},6],[{&quot;v&quot;:&quot;PH&quot;,&quot;f&quot;:&quot;Philippines&quot;},6],[{&quot;v&quot;:&quot;PR&quot;,&quot;f&quot;:&quot;Puerto Rico&quot;},5],[{&quot;v&quot;:&quot;TN&quot;,&quot;f&quot;:&quot;Tunisia&quot;},5],[{&quot;v&quot;:&quot;EG&quot;,&quot;f&quot;:&quot;Egypt&quot;},5],[{&quot;v&quot;:&quot;KE&quot;,&quot;f&quot;:&quot;Kenya&quot;},5],[{&quot;v&quot;:&quot;NO&quot;,&quot;f&quot;:&quot;Norway&quot;},5],[{&quot;v&quot;:&quot;BG&quot;,&quot;f&quot;:&quot;Bulgaria&quot;},5],[{&quot;v&quot;:&quot;SA&quot;,&quot;f&quot;:&quot;Saudi Arabia&quot;},4],[{&quot;v&quot;:&quot;ID&quot;,&quot;f&quot;:&quot;Indonesia&quot;},4],[{&quot;v&quot;:&quot;CI&quot;,&quot;f&quot;:&quot;Côte d&#39;Ivoire&quot;},4],[{&quot;v&quot;:&quot;PE&quot;,&quot;f&quot;:&quot;Peru&quot;},4],[{&quot;v&quot;:&quot;UY&quot;,&quot;f&quot;:&quot;Uruguay&quot;},4],[{&quot;v&quot;:&quot;CZ&quot;,&quot;f&quot;:&quot;Czechia&quot;},4],[{&quot;v&quot;:&quot;DK&quot;,&quot;f&quot;:&quot;Denmark&quot;},3],[{&quot;v&quot;:&quot;AE&quot;,&quot;f&quot;:&quot;United Arab Emirates&quot;},3],[{&quot;v&quot;:&quot;NG&quot;,&quot;f&quot;:&quot;Nigeria&quot;},3],[{&quot;v&quot;:&quot;PT&quot;,&quot;f&quot;:&quot;Portugal&quot;},3],[{&quot;v&quot;:&quot;MV&quot;,&quot;f&quot;:&quot;Maldives&quot;},3],[{&quot;v&quot;:&quot;IL&quot;,&quot;f&quot;:&quot;Israel&quot;},3],[{&quot;v&quot;:&quot;BD&quot;,&quot;f&quot;:&quot;Bangladesh&quot;},3],[{&quot;v&quot;:&quot;UA&quot;,&quot;f&quot;:&quot;Ukraine&quot;},3],[{&quot;v&quot;:&quot;PA&quot;,&quot;f&quot;:&quot;Panama&quot;},3],[{&quot;v&quot;:&quot;SI&quot;,&quot;f&quot;:&quot;Slovenia&quot;},3],[{&quot;v&quot;:&quot;JO&quot;,&quot;f&quot;:&quot;Jordan&quot;},3],[{&quot;v&quot;:&quot;HK&quot;,&quot;f&quot;:&quot;Hong Kong&quot;},3],[{&quot;v&quot;:&quot;IS&quot;,&quot;f&quot;:&quot;Iceland&quot;},3],[{&quot;v&quot;:&quot;GE&quot;,&quot;f&quot;:&quot;Georgia&quot;},3],[{&quot;v&quot;:&quot;QA&quot;,&quot;f&quot;:&quot;Qatar&quot;},2],[{&quot;v&quot;:&quot;KH&quot;,&quot;f&quot;:&quot;Cambodia&quot;},2],[{&quot;v&quot;:&quot;HR&quot;,&quot;f&quot;:&quot;Croatia&quot;},2],[{&quot;v&quot;:&quot;TW&quot;,&quot;f&quot;:&quot;Taiwan&quot;},2],[{&quot;v&quot;:&quot;SV&quot;,&quot;f&quot;:&quot;El Salvador&quot;},2],[{&quot;v&quot;:&quot;EE&quot;,&quot;f&quot;:&quot;Estonia&quot;},2],[{&quot;v&quot;:&quot;SK&quot;,&quot;f&quot;:&quot;Slovakia&quot;},2],[{&quot;v&quot;:&quot;KR&quot;,&quot;f&quot;:&quot;Korea, Republic of&quot;},2],[{&quot;v&quot;:&quot;BA&quot;,&quot;f&quot;:&quot;Bosnia and Herzegovina&quot;},2],[{&quot;v&quot;:&quot;LT&quot;,&quot;f&quot;:&quot;Lithuania&quot;},2],[{&quot;v&quot;:&quot;DZ&quot;,&quot;f&quot;:&quot;Algeria&quot;},2],[{&quot;v&quot;:&quot;LV&quot;,&quot;f&quot;:&quot;Latvia&quot;},2],[{&quot;v&quot;:&quot;KP&quot;,&quot;f&quot;:&quot;Korea, Democratic People&#39;s Republic of&quot;},2],[{&quot;v&quot;:&quot;MK&quot;,&quot;f&quot;:&quot;North Macedonia&quot;},2],[{&quot;v&quot;:&quot;GY&quot;,&quot;f&quot;:&quot;Guyana&quot;},2],[{&quot;v&quot;:&quot;CN&quot;,&quot;f&quot;:&quot;China&quot;},2],[{&quot;v&quot;:&quot;GN&quot;,&quot;f&quot;:&quot;Guinea&quot;},2],[{&quot;v&quot;:&quot;VN&quot;,&quot;f&quot;:&quot;Vietnam&quot;},2],[{&quot;v&quot;:&quot;KY&quot;,&quot;f&quot;:&quot;Cayman Islands&quot;},1],[{&quot;v&quot;:&quot;BY&quot;,&quot;f&quot;:&quot;Belarus&quot;},1],[{&quot;v&quot;:&quot;CR&quot;,&quot;f&quot;:&quot;Costa Rica&quot;},1],[{&quot;v&quot;:&quot;GP&quot;,&quot;f&quot;:&quot;Guadeloupe&quot;},1],[{&quot;v&quot;:&quot;AZ&quot;,&quot;f&quot;:&quot;Azerbaijan&quot;},1],[{&quot;v&quot;:&quot;CY&quot;,&quot;f&quot;:&quot;Cyprus&quot;},1],[{&quot;v&quot;:&quot;OM&quot;,&quot;f&quot;:&quot;Oman&quot;},1],[{&quot;v&quot;:&quot;TZ&quot;,&quot;f&quot;:&quot;Tanzania, United Republic of&quot;},1],[{&quot;v&quot;:&quot;SB&quot;,&quot;f&quot;:&quot;Solomon Islands&quot;},1],[{&quot;v&quot;:&quot;RS&quot;,&quot;f&quot;:&quot;Serbia&quot;},1],[{&quot;v&quot;:&quot;RE&quot;,&quot;f&quot;:&quot;Réunion&quot;},1],[{&quot;v&quot;:&quot;ZW&quot;,&quot;f&quot;:&quot;Zimbabwe&quot;},1],[{&quot;v&quot;:&quot;MT&quot;,&quot;f&quot;:&quot;Malta&quot;},1],[{&quot;v&quot;:&quot;PS&quot;,&quot;f&quot;:&quot;Palestine, State of&quot;},1],[{&quot;v&quot;:&quot;GT&quot;,&quot;f&quot;:&quot;Guatemala&quot;},1],[{&quot;v&quot;:&quot;LA&quot;,&quot;f&quot;:&quot;Lao People&#39;s Democratic Republic&quot;},1],[{&quot;v&quot;:&quot;MA&quot;,&quot;f&quot;:&quot;Morocco&quot;},1],[{&quot;v&quot;:&quot;CG&quot;,&quot;f&quot;:&quot;Congo&quot;},1],[{&quot;v&quot;:&quot;NE&quot;,&quot;f&quot;:&quot;Niger&quot;},1],[{&quot;v&quot;:&quot;AM&quot;,&quot;f&quot;:&quot;Armenia&quot;},1],[{&quot;v&quot;:&quot;MM&quot;,&quot;f&quot;:&quot;Myanmar&quot;},1],[{&quot;v&quot;:&quot;LK&quot;,&quot;f&quot;:&quot;Sri Lanka&quot;},1],[{&quot;v&quot;:&quot;DO&quot;,&quot;f&quot;:&quot;Dominican Republic&quot;},1],[{&quot;v&quot;:&quot;AQ&quot;,&quot;f&quot;:&quot;Antarctica&quot;},1],[{&quot;v&quot;:&quot;SO&quot;,&quot;f&quot;:&quot;Somalia&quot;},1],[{&quot;v&quot;:&quot;RW&quot;,&quot;f&quot;:&quot;Rwanda&quot;},1],[{&quot;v&quot;:&quot;HN&quot;,&quot;f&quot;:&quot;Honduras&quot;},1]]" data-type="Tweeters" data-colors="[&quot;#94EFFD&quot;,&quot;#2F90B9&quot;]"></div><div class="chart_loading_spinner"></div></div>
+<div class='table-wrapper geo'>
+<h3>Geographical breakdown</h3>
+<table>
+<tr>
+<th>Country</th>
+<th class='num'>Count</th>
+<th class='num percent'>As %</th>
+</tr>
+<tr>
+<td>United States</td>
+<td class='num'>733</td>
+<td class='num'>22%</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td class='num'>206</td>
+<td class='num'>6%</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td class='num'>120</td>
+<td class='num'>4%</td>
+</tr>
+<tr>
+<td>India</td>
+<td class='num'>80</td>
+<td class='num'>2%</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td class='num'>78</td>
+<td class='num'>2%</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td class='num'>74</td>
+<td class='num'>2%</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td class='num'>54</td>
+<td class='num'>2%</td>
+</tr>
+<tr>
+<td>France</td>
+<td class='num'>53</td>
+<td class='num'>2%</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td class='num'>45</td>
+<td class='num'>1%</td>
+</tr>
+<tr class='meta'>
+<td>Other</td>
+<td class='num'>582</td>
+<td class='num'>17%</td>
+</tr>
+<tr class='meta'>
+<td>Unknown</td>
+<td class='num'>1358</td>
+<td class='num'>40%</td>
+</tr>
+</table>
+</div>
+<div class='table-wrapper users'>
+<h3>Demographic breakdown</h3>
+<table>
+<tr>
+<th>Type</th>
+<th class='num'>Count</th>
+<th class='num percent'>As %</th>
+</tr>
+<tr>
+<td>Members of the public</td>
+<td class='num'>2815</td>
+<td class='num'>83%</td>
+</tr>
+<tr>
+<td>Scientists</td>
+<td class='num'>379</td>
+<td class='num'>11%</td>
+</tr>
+<tr>
+<td>Science communicators (journalists, bloggers, editors)</td>
+<td class='num'>145</td>
+<td class='num'>4%</td>
+</tr>
+<tr>
+<td>Practitioners (doctors, other healthcare professionals)</td>
+<td class='num'>42</td>
+<td class='num'>1%</td>
+</tr>
+<tr class='meta'>
+<td>Unknown</td>
+<td class='num'>2</td>
+<td class='num'>&lt;1%</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+<div class='tabbable-panel' data-type='mendeley-demographics'>
+<h2>Mendeley readers</h2>
+<div class='section-summary'>
+<div class='link'><a class="contextual-help-link" data-type="readers" title="About this data" data-content="&lt;h3&gt;What am I seeing on this tab?&lt;/h3&gt;
+&lt;p&gt;Readership data from the online reference manager &lt;a href=&quot;https://www.mendeley.com/&quot; target=&quot;_blank&quot;&gt;Mendeley&lt;/a&gt; are displayed here.&lt;/p&gt;
+&lt;p&gt;Since the information provided by online reference managers is always anonymised, Altmetric is unable to provide auditable raw data for readers. As such, readership counts do not contribute towards to the Altmetric Attention Score.&lt;/p&gt;
+" href="#"><i class="fa fa-question-circle"></i></a></div>
+<div class='text'>The data shown below were compiled from readership statistics for <strong>75</strong> Mendeley readers of this research output. <a href='https://www.mendeley.com/catalogue/d293cc0a-0958-3a20-b110-789f677ff6f1/' target='_blank'>Click here to see the associated Mendeley record.</a></div>
+</div>
+<div class='demographics-panel'>
+<div class='demographics-group mendeley'>
+<div class="geo_chart_wrapper chart_wrapper"><div class="geo_chart" data-countries="[[{&quot;v&quot;:&quot;IR&quot;,&quot;f&quot;:&quot;Iran, Islamic Republic of&quot;},1],[{&quot;v&quot;:&quot;IN&quot;,&quot;f&quot;:&quot;India&quot;},1],[{&quot;v&quot;:&quot;US&quot;,&quot;f&quot;:&quot;United States&quot;},1]]" data-type="Readers" data-colors="[&quot;#FF6666&quot;,&quot;#B60000&quot;]"></div><div class="chart_loading_spinner"></div></div>
+<div class='table-wrapper geo'>
+<h3>Geographical breakdown</h3>
+<table>
+<tr>
+<th>Country</th>
+<th class='num'>Count</th>
+<th class='num percent'>As %</th>
+</tr>
+<tr>
+<td>Iran, Islamic Republic of</td>
+<td class='num'>1</td>
+<td class='num'>1%</td>
+</tr>
+<tr>
+<td>India</td>
+<td class='num'>1</td>
+<td class='num'>1%</td>
+</tr>
+<tr>
+<td>United States</td>
+<td class='num'>1</td>
+<td class='num'>1%</td>
+</tr>
+<tr class='meta'>
+<td>Unknown</td>
+<td class='num'>72</td>
+<td class='num'>96%</td>
+</tr>
+</table>
+</div>
+<div class='table-wrapper users'>
+<h3>Demographic breakdown</h3>
+<table>
+<tr>
+<th>Readers by professional status</th>
+<th class='num'>Count</th>
+<th class='num percent'>As %</th>
+</tr>
+<tr>
+<td>Student  &gt; Master</td>
+<td class='num'>9</td>
+<td class='num'>12%</td>
+</tr>
+<tr>
+<td>Researcher</td>
+<td class='num'>8</td>
+<td class='num'>11%</td>
+</tr>
+<tr>
+<td>Student  &gt; Ph. D. Student</td>
+<td class='num'>8</td>
+<td class='num'>11%</td>
+</tr>
+<tr>
+<td>Student  &gt; Bachelor</td>
+<td class='num'>7</td>
+<td class='num'>9%</td>
+</tr>
+<tr>
+<td>Other</td>
+<td class='num'>5</td>
+<td class='num'>7%</td>
+</tr>
+<tr class='meta'>
+<td>Other</td>
+<td class='num'>15</td>
+<td class='num'>20%</td>
+</tr>
+<tr class='meta'>
+<td>Unknown</td>
+<td class='num'>23</td>
+<td class='num'>31%</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Readers by discipline</th>
+<th class='num'>Count</th>
+<th class='num percent'>As %</th>
+</tr>
+<tr>
+<td>Medicine and Dentistry</td>
+<td class='num'>17</td>
+<td class='num'>23%</td>
+</tr>
+<tr>
+<td>Nursing and Health Professions</td>
+<td class='num'>6</td>
+<td class='num'>8%</td>
+</tr>
+<tr>
+<td>Agricultural and Biological Sciences</td>
+<td class='num'>4</td>
+<td class='num'>5%</td>
+</tr>
+<tr>
+<td>Physics and Astronomy</td>
+<td class='num'>4</td>
+<td class='num'>5%</td>
+</tr>
+<tr>
+<td>Business, Management and Accounting</td>
+<td class='num'>3</td>
+<td class='num'>4%</td>
+</tr>
+<tr class='meta'>
+<td>Other</td>
+<td class='num'>17</td>
+<td class='num'>23%</td>
+</tr>
+<tr class='meta'>
+<td>Unknown</td>
+<td class='num'>24</td>
+<td class='num'>32%</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+<div class='tabbable-panel' data-type='score'>
+<h2>Attention Score in Context</h2>
+<div class='section-summary'>
+<div class='link'><a class="contextual-help-link" data-type="score_context" title="About this data" data-content="&lt;h3&gt;What am I seeing on this tab?&lt;/h3&gt;
+&lt;p&gt;An Altmetric Attention Score is calculated for every research output that has been mentioned in at least one of our &lt;a href=&#39;https://help.altmetric.com/support/solutions/folders/6000237990&#39; target=&#39;_blank&#39;&gt;tracked sources&lt;/a&gt;. On its own, the Altmetric Attention Score doesn’t provide enough information for you to assess the amount of attention received, relative to other output tracked. For instance, you might want to know if the amount of attention is typical for journal articles that were published at a similar time. Or, you might want to know if the amount of attention exceeds levels expected for other articles in the same journal. With contextual information, you can compare this output’s Altmetric Attention Score against other facets, e.g., in the same journal, age, and more.&lt;/p&gt;
+&lt;p&gt;Please note that if Altmetric has not found any mentions of the research output, that output will not be included in the Attention Score in Context calculations. &lt;a href=&#39;https://help.altmetric.com/support/solutions/articles/6000233311-how-is-the-altmetric-attention-score-calculated-&#39; target=&#39;_blank&#39;&gt;Click here to learn how Altmetric Attention Scores are calculated&lt;/a&gt;.&lt;/p&gt;
+" href="#"><i class="fa fa-question-circle"></i></a></div>
+<div class='text'>This research output has an <strong>Altmetric Attention Score</strong> of <strong>3737</strong>. This is our high-level measure of the quality and quantity of online attention that it has received. This Attention Score, as well as the ranking and number of research outputs shown below, was calculated when the research output was last mentioned on <strong>12 June 2022</strong>.</div>
+</div>
+<div class='score-context-tabs'>
+<div class='score-context-list'>
+<div class='context' data-type='all'>
+<div class='prelude'>All research outputs</div>
+<div class='large-number'><span class='hash'>#</span>1,121</div>
+<div class='small-number'>of 21,606,563 outputs</div>
+</div>
+<div class='context' data-type='journal'>
+<div class='prelude'>Outputs from Nature</div>
+<div class='large-number'><span class='hash'>#</span>118</div>
+<div class='small-number'>of 88,393 outputs</div>
+</div>
+<div class='context' data-type='coeval'>
+<div class='prelude'>Outputs of similar age</div>
+<div class='large-number'><span class='hash'>#</span>4</div>
+<div class='small-number'>of 288,894 outputs</div>
+</div>
+<div class='context' data-type='coeval_journal'>
+<div class='prelude'>Outputs of similar age from Nature</div>
+<div class='large-number'><span class='hash'>#</span>4</div>
+<div class='small-number'>of 889 outputs</div>
+</div>
+</div>
+<div class='score-context-contents'>
+<div class='score-context-content' data-type='all'>
+Altmetric has tracked 21,606,563 research outputs across all sources so far. Compared to these this one has done particularly well and is in the 99th percentile: it's <strong>in the top 5% of all research outputs ever tracked</strong> by Altmetric.
+</div>
+<div class='score-context-content' data-type='journal'>
+So far Altmetric has tracked 88,393 research outputs from this source. They typically receive a lot more attention than average, with a mean Attention Score of 97.8. This one has done particularly well, scoring <strong>higher than 99% of its peers</strong>.
+</div>
+<div class='score-context-content' data-type='coeval'>
+Older research outputs will score higher simply because they've had more time to accumulate mentions. To account for age we can compare this Altmetric Attention Score to the 288,894 tracked outputs that were published within six weeks on either side of this one in any source. This one has done particularly well, scoring <strong>higher than 99% of its contemporaries</strong>.
+</div>
+<div class='score-context-content' data-type='coeval_journal'>
+We're also able to compare this research output to 889 others from the same source and published within six weeks on either side of this one. This one has done particularly well, scoring <strong>higher than 99% of its contemporaries</strong>.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class='branding-footer'>
+<a class='logo' href='https://www.altmetric.com' target='_blank'>Altmetric</a>
+<p class='credits'>This page is provided by <a href='http://www.altmetric.com' target='_blank'>Altmetric</a>.</p>
+</div>
+
+
+
+
+</body>
+</html>
